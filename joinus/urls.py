@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from contact.views import JoinFormView
+from contact.views import JoinFormView, SuccessView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', JoinFormView.as_view(), name='contact')
+    url(r'^$', JoinFormView.as_view(), name='contact'),
+    url(r'^form-success/', SuccessView.as_view(), name='form-success')
 
 ]

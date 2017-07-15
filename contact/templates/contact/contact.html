@@ -7,6 +7,10 @@
         <button type='submit'>Submit</button>
     </form>
 
+
+{% endblock content %}
+
+{% block jquery %}
     <script>
         $(document).ready(function(){
             var $myForm = $('.my-ajax-form')
@@ -37,4 +41,4 @@
             }
         })
 </script>
-{% endblock content %}
+{% endblock %}
